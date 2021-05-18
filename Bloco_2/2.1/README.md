@@ -1,1 +1,0 @@
-Nestes exercícios aprendi a utilização do Git e GitHub.

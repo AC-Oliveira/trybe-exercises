@@ -3,4 +3,4 @@ console.log(addition = a+b);
 console.log(subtraction = a-b);
 console.log(multiplication = a*b);
 console.log(division = a/b);
-console.log(mod = a%b);
+console.log(mod = a%b); 

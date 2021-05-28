@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function addTag(childTag, parentTag, index2) {
+        childTag = document.createElement(childTag);
+        parentTag = document.querySelectorAll(parentTag)[index2];
+        return parentTag.appendChild(childTag);
+      }
+      function addText(text,element, index3) {
+        element = document.querySelectorAll(element)[index3];
+        element.innerText = text;
+      }
+      function addClass(tag, classes, index){
+        tag = document.querySelectorAll(tag)[index];
+        return tag.className = classes;
+      }
+      function addId(tag, id, index4) {
+        tag = document.querySelectorAll(tag)[index4];
+        return tag.id = id;
+      }
+      function delTag(childTag, parentTag, indexParent, indexChild) {
+        parentTag = document.querySelectorAll(parentTag)[indexParent];
+        childTag = document.querySelectorAll(childTag)[indexChild];
+        return parentTag.removeChild(childTag);
+      }
+      
+      addTag('h1','body', 0);
+      addText('Exercício 5.2 - JavaScript DOM', 'h1', 0);
+      addClass('h1','title', 0);
+      addTag('div','body', 0);
+      addClass('div', 'main-content', 0);
+      addTag('div','div', 0);
+      addClass('div', 'center-content', 1);
+      addTag('p', 'div', 1);
+      addText('Exercício 5.2 - JavaScript DOM', 'p', 0);
+      addTag('div', 'div', 0);
+      addClass('div', 'left-content', 2);
+      addTag('div', 'div', 0);
+      addClass('div', 'right-content', 3);
+      addTag('img', 'div', 2);
+      addId('img', 'Img', 0);
+      document.getElementById('Img').src = 'https://picsum.photos/200';
+      addClass('img', 'small-image', 0)
+      addTag('ul', 'div', 3)
+      for(let index5 = 0; index5<10; index5 += 1) {
+        addTag('li', 'ul', 0);
+        addText(index5+1, 'li', index5);
+      }
+      for(let index6 = 0; index6 < 3; index6 += 1){
+        addTag('h3', 'div', 0);
+        addClass('h3', 'description', index6);
+        addText('Hello World', 'h3', index6);
+      }
+      delTag('div', 'div', 0, 2);
+      let centralize = document.getElementsByClassName('right-content')[0];
+      centralize.style.marginRight = 'auto';
+      delTag('li','ul',0, 9);
+      delTag('li','ul',0, 8);
+      // function changePropertyValue (className, property, value, index7) {
+        //   className = document.getElementsByClassName(className)[index7];
+        //   return className.style.property = value;
+        // }
+        // let marginRight;
+        // changePropertyValue('right-content', marginRight, 'auto', 0);
+        </script>
+  </body>
+  </html>

@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+}
+body {
+  background-color: bisque;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  display: block;
+  background-color: black;
+  color: bisque;
+  padding: 0 100%;
+}
+
+label {
+  display: block;
+}
+
+form {
+  background-color: black;
+  color: bisque;
+  border: 2px solid rgba(255, 228, 196, 0.637);
+  margin-top: 100px;
+  padding: 15px;
+}

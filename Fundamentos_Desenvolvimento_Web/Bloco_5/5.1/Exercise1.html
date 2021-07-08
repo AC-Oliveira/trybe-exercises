@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="paragraph-class">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="paragraph-class">Segundo parágrafo!</p>
+<!-- 
+  1.  Recupere o elemento que contém o título da página e faça algo com ele, como alterá-lo   para o nome do seu filme favorito.
+  2.  Agora recupere o segundo parágrafo e use sua criatividade para alterá-lo.
+  3.  Por fim, recupere o subtítulo e altere-o também. 
+  4.  Adicione uma classe igual para os dois parágrafos.
+  5.  Recupere os seus parágrafos via código JavaScript , usando a função getElementsByClassName.
+  6.  Altere algum estilo do primeiro deles.
+  7.  Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName .
+  8.  Para praticar, substitua todas as funções que você usou no exercício anterior por querySelector e/ou querySelectorAll .
+--> 
+
+    <script>
+      /*    
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.getElementById('page-title').innerText = 'Forrest Gump';
+      document.getElementById('second-paragraph').innerText = 'Um ótimo filme para se assistir.';
+      document.getElementById('subtitle').innerText = 'Resenha:';
+      const pClass = document.getElementsByClassName('paragraph-class');
+      pClass[0].style.border = 'solid black 2px';
+      let hFourTag = document.getElementsByTagName('h4');
+      hFourTag[0].style.color = 'goldenrod';
+       */
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.querySelector('#page-title').innerText = 'Forrest Gump';
+      document.querySelector('#second-paragraph').innerText = 'Um ótimo filme para se assistir.';
+      document.querySelector('#subtitle').innerText = 'Resenha:';
+      const pClass = document.querySelectorAll('.paragraph-class');
+      pClass[0].style.border = 'solid black 2px';
+      let hFourTag = document.querySelector('h4');
+      hFourTag.style.color = 'goldenrod';
+    </script>
+  </body>
+</html>

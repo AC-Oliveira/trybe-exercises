@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Cadastre o seu currículo</h1>
+  <form action="" method="get">
+    <div>
+      <fieldset>
+        <legend>Nome</legend>
+          <input type="text" name="name" id="input-name" maxlength="40" required>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>Email</legend>
+        <input type="email" name="email" id="input-email" maxlength="50" required>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>CPF</legend>
+        <input type="text" name="cpf" id="input-cpf" maxlength="11" required>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>Endereço</legend>
+        <input type="text" name="address" id="input-address" maxlength="200" required>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>Cidade</legend>
+        <input type="text" name="city" id="input-city" maxlength="28" required>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>Estado</legend>
+        <select name="state" id="input-state" required>
+          <option value="default" hidden>Selecione o seu estado</option>
+        </select>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>Tipo de Residência</legend>
+        <label for="">
+          <label for="house">
+            <input type="radio" name="type" id="house">Casa
+          </label>
+          <label for="apartament">
+            <input type="radio" name="type" id="apartament">Apartamento
+          </label>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>Resumo do Currículo</legend>
+        <textarea name="resume" id="input-resume" ></textarea>
+      </fieldset>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </form>
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
